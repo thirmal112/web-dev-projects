@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do & Notes App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="container" aria-label="To-Do & Notes App">
+      <div class="todo-topbar">
+        <input type="text" id="search-input" placeholder="Search tasks or notes..." aria-label="Search tasks or notes">
+      </div>
+      <form id="todo-form" autocomplete="off">
+        <input type="text" id="todo-input" placeholder="Add a new task or note..." required />
+        <button type="submit">Add</button>
+      </form>
+      <div class="todo-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="clear-btn" id="clear-all">Clear All</button>
+        <button id="dark-mode-toggle" title="Toggle dark mode" style="margin-left:auto;">🌙</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
